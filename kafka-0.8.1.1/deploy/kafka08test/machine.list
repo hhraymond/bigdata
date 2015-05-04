@@ -1,4 +1,0 @@
-# brokerId -> host:port
-0 -> kf1dg.prod.mediav.com:9092
-1 -> kf2dg.prod.mediav.com:9092
-2 -> kf3dg.prod.mediav.com:9092
