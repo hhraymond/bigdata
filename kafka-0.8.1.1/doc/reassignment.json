@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "partitions": [
+        {
+            "topic": "a.u.2",
+            "partition": 8,
+            "replicas": [
+                0,
+                1
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 0,
+            "replicas": [
+                1,
+                2
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 6,
+            "replicas": [
+                1,
+                2
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 7,
+            "replicas": [
+                2,
+                0
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 3,
+            "replicas": [
+                1,
+                0
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 9,
+            "replicas": [
+                1,
+                0
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 4,
+            "replicas": [
+                2,
+                1
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 1,
+            "replicas": [
+                2,
+                0
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 2,
+            "replicas": [
+                0,
+                1
+            ]
+        },
+        {
+            "topic": "a.u.2",
+            "partition": 5,
+            "replicas": [
+                0,
+                2
+            ]
+        }
+    ]
+}

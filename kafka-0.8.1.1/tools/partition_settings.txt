@@ -1,0 +1,36 @@
+我们按10k qps 需要配置 5个partition 来算（hadoop获取日志的速度最大为5M/s, 折半为 2.5M, 约2500的qps)
+
+default 配置: replica:2 reserve:40h
+
+topic partition others
+a.c.3 6 
+a.s.3 30  
+d.b.3 16  
+d.c.3 6 
+d.e.3 80  replica:1 reserve:24h
+d.i.3 6 
+d.s.3 16  
+d.u.3 60  
+d.x.3 60  
+e.c.3 6 
+e.e.3 16  
+e.s.3 16  
+e.u.3 16  
+e.x.3 16  
+m.a.3 6 
+t.b.3 6 
+t.c.3 6 
+t.m.3 16  
+t.r.3 6 
+t.s.3 6 
+t.t.3 6 
+t.v.9 6 
+t.e.3 6 
+t.i.3 6 
+t.z.3 6 
+
+r.3   16  rtlp
+u.x.3 16  user behavior, 需要改topic名, 1/10的d.x
+u.u.3 16  user behavior, 需要改topic名, 1/10的d.u
+st.3  6   dsp-storm, 建议topic改为s.t.3
+

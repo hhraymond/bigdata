@@ -1,0 +1,16 @@
+# brokerId -> host:port
+#0 -> kf30dg.prod.mediav.com:9092
+1 -> kf31dg.prod.mediav.com:9092
+2 -> kf32dg.prod.mediav.com:9092
+3 -> kf33dg.prod.mediav.com:9092
+4 -> kf34dg.prod.mediav.com:9092
+5 -> kf35dg.prod.mediav.com:9092
+6 -> kf36dg.prod.mediav.com:9092
+7 -> kf37dg.prod.mediav.com:9092
+8 -> kf38dg.prod.mediav.com:9092
+9 -> kf39dg.prod.mediav.com:9092
+10 -> kf40dg.prod.mediav.com:9092
+11 -> kf41dg.prod.mediav.com:9092
+12 -> kf42dg.prod.mediav.com:9092
+13 -> kf43dg.prod.mediav.com:9092
+14 -> kf44dg.prod.mediav.com:9092

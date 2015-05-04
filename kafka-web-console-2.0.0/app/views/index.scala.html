@@ -1,0 +1,95 @@
+@import helper.twitterBootstrap._
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kafka Web Console</title>
+        <link rel="stylesheet" media="screen" href=@routes.Assets.at("stylesheets/bootstrap.min.css")>
+        <link rel="stylesheet" media="screen" href=@routes.Assets.at("stylesheets/bootstrap-theme.min.css")>
+        <link rel="stylesheet" media="screen" href=@routes.Assets.at("stylesheets/custom.css")>
+        <link rel="stylesheet" media="screen" href=@routes.Assets.at("stylesheets/font-awesome.min.css")>
+        <link rel="stylesheet" media="screen" href=@routes.Assets.at("stylesheets/nv.d3.css")>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.ico")">
+        <script src=@routes.Assets.at("javascripts/vendor/d3.v3.min.js  ") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/nv.d3.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/jquery-1.9.0.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/angular.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/angular-animate.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/bootstrap.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/angular-route.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/underscore-min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/vendor/moment.min.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/app.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/services.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/filters.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/zookeepers-controller.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/topics-controller.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/topic-controller.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/brokers-controller.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/offset-history-controller.js") type="text/javascript"></script>
+        <script src=@routes.Assets.at("javascripts/settings-controller.js") type="text/javascript"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="@routes.Assets.at("javascripts/html5shiv.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/respond.min.js")" type="text/javascript"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                    <img class="logo" src=@routes.Assets.at("images/kafka_logo.png")>
+                    <span class="title">Kafka Web Console</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="section text-center" data-ng-class="{active:isActive('/zookeepers')}">
+                            <a href="#zookeepers">
+                                <h4>
+                                    <img class="logo" src=@routes.Assets.at("images/zookeeper_small.gif")>  Zookeepers
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="section text-center" data-ng-class="{active:isActive('/brokers')}">
+                            <a href="#brokers">
+                                <h4>
+                                    <img class="logo" src=@routes.Assets.at("images/kafka_logo.png")>  Brokers
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="section text-center" data-ng-class="{active:isActive('/topics')}">
+                            <a href="#topics">
+                                <h4>
+                                    <i class="fa fa-envelope fa-2x"></i>  Topics
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="section text-center" data-ng-class="{active:isActive('/settings')}">
+                            <a href="#settings">
+                                <h4>
+                                    <i class="fa fa-cogs fa-2x"></i>  Settings
+                                </h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <div class="row placeholders">
+                        <div data-ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

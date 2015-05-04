@@ -1,0 +1,219 @@
+<ul class="nav nav-tabs" ng-init="getZookeepers('all')">
+    <li class="active" data-ng-click="getZookeepers('all')">
+        <a data-toggle="tab" data-target="#all-zookeepers">All</a>
+    </li>
+    <li data-ng-click="getZookeepers('development')">
+        <a data-toggle="tab" data-target="#development-zookeepers">Development</a>
+    </li>
+    <li data-ng-click="getZookeepers('production')">
+        <a data-toggle="tab" data-target="#production-zookeepers">Production</a>
+    </li>
+    <li data-ng-click="getZookeepers('staging')">
+        <a data-toggle="tab" data-target="#staging-zookeepers">Staging</a>
+    </li>
+    <li data-ng-click="getZookeepers('test')">
+        <a data-toggle="tab" data-target="#test-zookeepers">Test</a>
+    </li>
+    <li>
+        <a data-toggle="tab" data-target="#register-zookeeper">Register Zookeeper</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="all-zookeepers">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Status</th>
+                <th>Group</th>
+                <th>Chroot</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr data-ng-class="{success: zookeeper.status == 'CONNECTED', warning: zookeeper.status == 'CONNECTING', danger: zookeeper.status == 'DISCONNECTED'}"
+                    data-ng-repeat="zookeeper in allZookeepers">
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{zookeeper.host}}</td>
+                    <td>{{zookeeper.port}}</td>
+                    <td>{{zookeeper.status}}<p class="dots" data-ng-show="zookeeper.status == 'CONNECTING'">...</p></td>
+                    <td>{{zookeeper.group}}</td>
+                    <td>{{zookeeper.chroot}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="removeZookeeper(zookeeper)">
+                            <i style="vertical-align: middle;" class="fa fa-times-circle-o fa-lg"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab-pane" id="development-zookeepers">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Status</th>
+                <th>Chroot</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr data-ng-class="{success: zookeeper.status == 'CONNECTED', warning: zookeeper.status == 'CONNECTING', danger: zookeeper.status == 'DISCONNECTED'}"
+                    data-ng-repeat="zookeeper in developmentZookeepers">
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{zookeeper.host}}</td>
+                    <td>{{zookeeper.port}}</td>
+                    <td>{{zookeeper.status}}<p class="dots" data-ng-show="zookeeper.status == 'CONNECTING'">...</p></td>
+                    <td>{{zookeeper.chroot}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="removeZookeeper(zookeeper)">
+                            <i class="fa fa-times-circle-o fa-lg"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab-pane" id="production-zookeepers">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Status</th>
+                <th>Chroot</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr data-ng-class="{success: zookeeper.status == 'CONNECTED', warning: zookeeper.status == 'CONNECTING', danger: zookeeper.status == 'DISCONNECTED'}"
+                    data-ng-repeat="zookeeper in productionZookeepers">
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{zookeeper.host}}</td>
+                    <td>{{zookeeper.port}}</td>
+                    <td>{{zookeeper.status}}<p class="dots" data-ng-show="zookeeper.status == 'CONNECTING'">...</p></td>
+                    <td>{{zookeeper.chroot}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="removeZookeeper(zookeeper)">
+                            <i class="fa fa-times-circle-o fa-lg"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab-pane" id="staging-zookeepers">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Status</th>
+                <th>Chroot</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr data-ng-class="{success: zookeeper.status == 'CONNECTED', warning: zookeeper.status == 'CONNECTING', danger: zookeeper.status == 'DISCONNECTED'}"
+                    data-ng-repeat="zookeeper in stagingZookeepers">
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{zookeeper.host}}</td>
+                    <td>{{zookeeper.port}}</td>
+                    <td>{{zookeeper.status}}<p class="dots" data-ng-show="zookeeper.status == 'CONNECTING'">...</p></td>
+                    <td>{{zookeeper.chroot}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="removeZookeeper(zookeeper)">
+                            <i class="fa fa-times-circle-o fa-lg"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab-pane" id="test-zookeepers">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <th>Name</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Status</th>
+                <th>Chroot</th>
+                <th></th>
+                </thead>
+                <tbody>
+                <tr data-ng-class="{success: zookeeper.status == 'CONNECTED', warning: zookeeper.status == 'CONNECTING', danger: zookeeper.status == 'DISCONNECTED'}"
+                    data-ng-repeat="zookeeper in testZookeepers">
+                    <td>{{zookeeper.name}}</td>
+                    <td>{{zookeeper.host}}</td>
+                    <td>{{zookeeper.port}}</td>
+                    <td>{{zookeeper.status}}<p class="dots" data-ng-show="zookeeper.status == 'CONNECTING'">...</p></td>
+                    <td>{{zookeeper.chroot}}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-xs" data-ng-click="removeZookeeper(zookeeper)">
+                            <i class="fa fa-times-circle-o fa-lg"></i></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab-pane" id="register-zookeeper">
+        <form role="form" name="zookeeperForm" data-ng-submit="createZookeeper(zookeeper)"
+              novalidate>
+            <div class="form-group"
+                 data-ng-class="{ 'has-error' : zookeeperForm.name.$invalid && !zookeeperForm.name.$pristine }">
+                <label for="name">Name</label>
+                <input data-ng-required="true" type="text" id="name" name="name" data-ng-model="zookeeper.name"
+                       class="form-control" data-placement="bottom" title="Unique name to identify registered Zookeeper"
+                       data-toggle="tooltip">
+
+                <p data-ng-show="zookeeperForm.name.$invalid && !zookeeperForm.name.$pristine" class="help-block">A name
+                    for Zookeeper is required.</p>
+            </div>
+            <div class="form-group"
+                 data-ng-class="{ 'has-error' : zookeeperForm.host.$invalid && !zookeeperForm.host.$pristine }">
+                <label for="host">Host</label>
+                <input type="text" id="host"
+                       data-ng-pattern="/^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\.?$/"
+                       name="host" data-ng-required="true" data-ng-model="zookeeper.host" class="form-control">
+
+                <p data-ng-show="zookeeperForm.host.$invalid && !zookeeperForm.host.$error.pattern && !zookeeperForm.host.$pristine"
+                   class="help-block">Hostname is required.</p>
+
+                <p data-ng-show="zookeeperForm.host.$error.pattern && !zookeeperForm.host.$pristine" class="help-block">
+                    Hostname must be in a valid format.</p>
+            </div>
+            <div class="form-group"
+                 data-ng-class="{ 'has-error' : zookeeperForm.port.$invalid && !zookeeperForm.port.$pristine }">
+                <label for="port">Port</label>
+                <input type="number" id="port" name="port" data-ng-model="zookeeper.port"
+                       data-ng-required="true" class="form-control" min="0" max="65535">
+
+                <p data-ng-show="zookeeperForm.port.$invalid && !zookeeperForm.port.$pristine" class="help-block">Port
+                    number is invalid.</p>
+            </div>
+            <div class="form-group">
+                <label for="chroot">Chroot</label>
+                <input type="text" id="chroot" name="chroot" data-ng-model="zookeeper.chroot"
+                       class="form-control" title="Path from which directory commands are run (optional)"
+                       data-toggle="tooltip" data-placement="bottom">
+            </div>
+            <div class="form-group">
+                <label for="group">Group</label>
+                <select data-ng-model="zookeeper.group" data-ng-required="true"
+                        data-ng-options="g.name for g in groups" id="group" class="form-control">
+                </select>
+            </div>
+            <p class="text-center">
+                <button class="btn btn-large btn-primary" data-ng-disabled="zookeeperForm.$invalid">Connect</button>
+            </p>
+        </form>
+    </div>
+</div>
+
+

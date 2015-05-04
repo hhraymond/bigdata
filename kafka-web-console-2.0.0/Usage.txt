@@ -1,0 +1,13 @@
+1. install dependence: mysql, play framework.
+
+2. set db conf in conf/application.conf
+
+3. compile command: "play compile", "play stage"
+
+4. run for the first time, use "play run", and click on browser to create database.
+
+5. run in background, use "nohup /home/mediav/kafka-web-console-2.0.0/target/universal/stage/bin/kafka-web-console &"
+
+6. crontab add:
+*/2 * * * * mediav sh /home/mediav/kafka-web-console-2.0.0/restart.sh
+0 */1 * * * mediav sh /home/mediav/kafka-web-console-2.0.0/restart.sh force

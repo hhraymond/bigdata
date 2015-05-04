@@ -1,0 +1,28 @@
+<form name="timeRange" class="form-inline">
+	<label>From:</label>
+	<div class="form-group" data-ng-class="{'has-error' : timeRange.fromDay.$invalid}">
+		<input class="form-control" data-ng-required="true" type="text" size=10 name="fromDay" data-ng-model="fromDay" data-ng-pattern="/^20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]$/">
+	</div>
+	<div class="form-group" data-ng-class="{'has-error' : timeRange.fromMinute.$invalid}">
+		<input class="form-control" data-ng-required="true" type="text" size=5 name="fromMinute" data-ng-model="fromMinute" data-ng-pattern="/^[0-2][0-9]:[0-5][0-9]$/">
+	</div>
+	<label>To:</label>
+	<div class="form-group" data-ng-class="{'has-error' : timeRange.toDay.$invalid}">
+		<input class="form-control" data-ng-required="true" type="text" size=10  name="toDay" data-ng-model="toDay" data-ng-pattern="/^20[0-9][0-9]-[0-1][0-9]-[0-3][0-9]$/">
+	</div>
+	<div class="form-group" data-ng-class="{'has-error' : timeRange.toMinute.$invalid}">
+		<input class="form-control" data-ng-required="true" type="text" size=5  name="toMinute" data-ng-model="toMinute" data-ng-pattern="/^[0-2][0-9]:[0-5][0-9]$/">
+	</div>
+	
+	<button class="btn btn-primary" ng-click="onGoToSpecificRange()">Go!</button>
+	<button class="btn btn-danger" ng-click="onLatest()">Latest Hour</button>
+
+	<input type="checkbox" data-ng-model="autoRefresh" data-ng-change="onAutoRefreshChange()"> Auto refresh (60s)
+</form>
+
+<div id="offset-history-chart" class="chart">
+    <svg></svg>
+</div>
+<div id="message-throughput-chart" class="chart">
+    <svg></svg>
+</div>

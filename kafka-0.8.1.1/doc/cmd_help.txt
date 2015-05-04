@@ -1,0 +1,30 @@
+
+## check offset
+./bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zkconnect pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --topic a.u.2 --group consumer-test
+
+
+## topic related
+./bin/kafka-topics.sh --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --describe --topic a.u.1
+
+./bin/kafka-topics.sh --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --create --topic a.u.1 --replication-factor 2 --partitions 10
+
+./bin/kafka-topics.sh --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --alter --topic a.u.2 --partition 10
+
+
+## reassign leadership of partitions
+./bin/kafka-preferred-replica-election.sh --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1
+
+
+## reassign partitions
+./bin/kafka-reassign-partitions.sh --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --broker-list "0,1,2" --topics-to-move-json-file topics-to-move.json --generate
+
+cat topics-to-move.json
+{"topics":
+         [{"topic": "a.u.2"}],
+                  "version":1
+}
+
+./bin/kafka-reassign-partitions.sh  --zookeeper pt1dg.prod.mediav.com:2181/my-kafka-0.8.1.1 --reassignment-json-file reassignment.json --execute
+
+cat reassignment.json
+{"version":1,"partitions":[{"topic":"a.u.2","partition":8,"replicas":[0,1]},{"topic":"a.u.2","partition":0,"replicas":[1,2]},{"topic":"a.u.2","partition":6,"replicas":[1,2]},{"topic":"a.u.2","partition":7,"replicas":[2,0]},{"topic":"a.u.2","partition":3,"replicas":[1,0]},{"topic":"a.u.2","partition":9,"replicas":[1,0]},{"topic":"a.u.2","partition":4,"replicas":[2,1]},{"topic":"a.u.2","partition":1,"replicas":[2,0]},{"topic":"a.u.2","partition":2,"replicas":[0,1]},{"topic":"a.u.2","partition":5,"replicas":[0,2]}]}
