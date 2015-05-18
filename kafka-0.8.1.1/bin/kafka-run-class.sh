@@ -110,7 +110,8 @@ fi
 
 # JVM performance options
 if [ -z "$KAFKA_JVM_PERFORMANCE_OPTS" ]; then
-  KAFKA_JVM_PERFORMANCE_OPTS="-server -XX:NewSize=256m -XX:MaxNewSize=256m -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCompressedOops -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true"
+  #KAFKA_JVM_PERFORMANCE_OPTS="-server -XX:NewSize=256m -XX:MaxNewSize=256m -XX:CMSInitiatingOccupancyFraction=70 -XX:+UseCompressedOops -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true"
+  KAFKA_JVM_PERFORMANCE_OPTS="-XX:PermSize=48m -XX:MaxPermSize=48m -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35"
 fi
 
 
