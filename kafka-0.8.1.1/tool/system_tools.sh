@@ -10,7 +10,7 @@
 ./bin/kafka-producer-perf-test.sh --broker-list="kf16dg.mediav.com:9092,kf17dg.mediav.com:9092" --messages=100000 --initial-message-id=1 --request-num-acks=1 --compression-codec=1 --thread=5 --batch-size=300 --topic=a.s.1
 ./bin/kafka-consumer-perf-test.sh  --zookeeper zk1dg.prod.mediav.com:2181/kafka --topic a.s.1 --group console2 --show-detailed-stats
 # Consumer Offset Checker
-./bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zookeeper zk1dg.prod.mediav.com:2181/kafka --topic a.s.1 --group console1 
+./bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zkconnect zk1dg.prod.mediav.com:2181/kafka --topic a.s.1 --group console1 
 # Get Offset Shell
 ./bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list kf16dg.prod.mediav.com:9092 --topic a.s.1 --time -1
 # Export Zookeeper Offsets
