@@ -17,7 +17,7 @@ if [ -d "$PKG" ]; then
 fi
 
 rm -f $PKG.tgz
-wget http://10.110.10.40:20001/$PKG.tgz
+wget http://10.110.10.xx:20001/$PKG.tgz
 tar -zxvf $PKG.tgz
 
 ln -sfT $PKG flume 
