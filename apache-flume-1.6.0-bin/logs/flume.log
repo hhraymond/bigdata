@@ -1,0 +1,384 @@
+10 十一月 2015 00:08:45,162 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:61)  - Configuration provider starting
+10 十一月 2015 00:08:45,167 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:133)  - Reloading configuration file:conf/flume-conf.properties
+10 十一月 2015 00:08:45,173 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 00:08:45,174 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:931)  - Added sinks: k1 Agent: a1
+10 十一月 2015 00:08:45,174 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 00:08:45,174 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 00:08:45,175 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 00:08:45,187 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:141)  - Post-validation flume configuration contains configuration for agents: [a1]
+10 十一月 2015 00:08:45,187 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:145)  - Creating channels
+10 十一月 2015 00:08:45,203 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type SPILLABLEMEMORY
+10 十一月 2015 00:08:45,230 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:200)  - Created channel c1
+10 十一月 2015 00:08:45,231 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type exec
+10 十一月 2015 00:08:45,241 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: k1, type: file_roll
+10 十一月 2015 00:08:45,248 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:114)  - Channel c1 connected to [r1, k1]
+10 十一月 2015 00:08:45,254 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:138)  - Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@7b8c1496 counterGroup:{ name:null counters:{} } }} channels:{c1=FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }} }
+10 十一月 2015 00:08:45,265 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:145)  - Starting Channel c1
+10 十一月 2015 00:08:45,267 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FileChannel.start:273)  - Starting FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+10 十一月 2015 00:08:45,285 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.<init>:344)  - Encryption is not enabled
+10 十一月 2015 00:08:45,286 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:392)  - Replay started
+10 十一月 2015 00:08:45,295 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:404)  - Found NextFileID 1, from [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1]
+10 十一月 2015 00:08:45,302 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFileV3.<init>:55)  - Starting up with /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint and /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+10 十一月 2015 00:08:45,302 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFileV3.<init>:59)  - Reading checkpoint metadata from /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+10 十一月 2015 00:08:45,425 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FlumeEventQueue.<init>:116)  - QueueSet population inserting 0 took 0
+10 十一月 2015 00:08:45,428 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:443)  - Last Checkpoint Mon Nov 09 23:38:39 CST 2015, queue depth = 0
+10 十一月 2015 00:08:45,432 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.doReplay:528)  - Replaying logs with v2 replay logic
+10 十一月 2015 00:08:45,435 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:249)  - Starting replay of [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1]
+10 十一月 2015 00:08:45,437 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:262)  - Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+10 十一月 2015 00:08:45,447 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.tools.DirectMemoryUtils.getDefaultDirectMemorySize:114)  - Unable to get maxDirectMemory from VM: NoSuchMethodException: sun.misc.VM.maxDirectMemory(null)
+10 十一月 2015 00:08:45,452 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.tools.DirectMemoryUtils.allocate:48)  - Direct Memory Allocation:  Allocation = 1048576, Allocated = 0, MaxDirectMemorySize = 20447232, Remaining = 20447232
+10 十一月 2015 00:08:45,478 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.LogFile$SequentialReader.skipToLastCheckpointPosition:634)  - Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1) is: 1447083159750, which is beyond the requested checkpoint time: 1447083159750 and position 0
+10 十一月 2015 00:08:45,478 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:346)  - read: 0, put: 0, take: 0, rollback: 0, commit: 0, skip: 0, eventCount:0
+10 十一月 2015 00:08:45,478 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FlumeEventQueue.replayComplete:409)  - Search Count = 0, Search Time = 0, Copy Count = 0, Copy Time = 0
+10 十一月 2015 00:08:45,481 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:491)  - Rolling /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+10 十一月 2015 00:08:45,482 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.roll:961)  - Roll start /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+10 十一月 2015 00:08:45,483 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.LogFile$Writer.<init>:214)  - Opened /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+10 十一月 2015 00:08:45,492 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.roll:977)  - Roll end
+10 十一月 2015 00:08:45,493 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFile.beginCheckpoint:230)  - Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+10 十一月 2015 00:08:45,495 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFile.checkpoint:255)  - Updating checkpoint metadata: logWriteOrderID: 1447085325322, queueSize: 0, queueHead: 0
+10 十一月 2015 00:08:45,513 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.writeCheckpoint:1034)  - Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2 position: 0 logWriteOrderID: 1447085325322
+10 十一月 2015 00:08:45,513 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FileChannel.start:301)  - Queue Size after replay: 0 [channel=c1]
+10 十一月 2015 00:08:45,552 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+10 十一月 2015 00:08:45,552 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: CHANNEL, name: c1 started
+10 十一月 2015 00:08:45,552 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:173)  - Starting Sink k1
+10 十一月 2015 00:08:45,553 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.RollingFileSink.start:104)  - Starting org.apache.flume.sink.RollingFileSink{name:k1, channel:c1}...
+10 十一月 2015 00:08:45,553 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:184)  - Starting Source r1
+10 十一月 2015 00:08:45,554 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.ExecSource.start:169)  - Exec source starting with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+10 十一月 2015 00:08:45,554 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+10 十一月 2015 00:08:45,554 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SINK, name: k1 started
+10 十一月 2015 00:08:45,554 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.RollingFileSink.start:134)  - RollInterval is not valid, file rolling will not happen.
+10 十一月 2015 00:08:45,554 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.RollingFileSink.start:136)  - RollingFileSink k1 started.
+10 十一月 2015 00:08:45,556 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SOURCE, name: r1: Successfully registered new MBean.
+10 十一月 2015 00:08:45,556 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SOURCE, name: r1 started
+10 十一月 2015 00:13:46,069 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:79)  - Stopping lifecycle supervisor 10
+10 十一月 2015 00:13:46,069 INFO  [pool-4-thread-1] (org.apache.flume.source.ExecSource$ExecRunnable.run:376)  - Command [tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a] exited with 130
+10 十一月 2015 00:13:46,070 INFO  [agent-shutdown-hook] (org.apache.flume.source.ExecSource.stop:192)  - Stopping exec source with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+10 十一月 2015 00:13:46,070 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: SOURCE, name: r1 stopped
+10 十一月 2015 00:13:46,070 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: SOURCE, name: r1. source.start.time == 1447085325556
+10 十一月 2015 00:13:46,070 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: SOURCE, name: r1. source.stop.time == 1447085626070
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.append-batch.accepted == 0
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.append-batch.received == 0
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.append.accepted == 0
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.append.received == 0
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.events.accepted == 1000005
+10 十一月 2015 00:13:46,071 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.events.received == 1000005
+10 十一月 2015 00:13:46,072 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SOURCE, name: r1. src.open-connection.count == 0
+10 十一月 2015 00:13:46,072 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:83)  - Configuration provider stopping
+10 十一月 2015 00:13:46,072 INFO  [agent-shutdown-hook] (org.apache.flume.sink.RollingFileSink.stop:228)  - RollingFile sink k1 stopping...
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: SINK, name: k1 stopped
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: SINK, name: k1. sink.start.time == 1447085325554
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: SINK, name: k1. sink.stop.time == 1447085626073
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.batch.complete == 0
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.batch.empty == 0
+10 十一月 2015 00:13:46,073 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.batch.underflow == 0
+10 十一月 2015 00:13:46,074 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.connection.closed.count == 0
+10 十一月 2015 00:13:46,074 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.connection.creation.count == 1
+10 十一月 2015 00:13:46,074 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.connection.failed.count == 0
+10 十一月 2015 00:13:46,074 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.attempt == 1000005
+10 十一月 2015 00:13:46,074 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.sucess == 1000005
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.sink.RollingFileSink.stop:262)  - RollingFile sink k1 stopped. Event metrics: SINK:k1{sink.connection.closed.count=1, sink.event.drain.attempt=1000005, sink.batch.underflow=0, sink.connection.failed.count=0, sink.connection.creation.count=1, sink.event.drain.sucess=1000005, sink.batch.empty=0, sink.batch.complete=0}
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: CHANNEL, name: c1 stopped
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 0
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447085626075
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1010000
+10 十一月 2015 00:13:46,075 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 1000005
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 1000005
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 1000038
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 1000005
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.FileChannel.stop:321)  - Stopping FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+10 十一月 2015 00:13:46,076 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.EventQueueBackingStoreFile.beginCheckpoint:230)  - Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+10 十一月 2015 00:13:46,079 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.EventQueueBackingStoreFile.checkpoint:255)  - Updating checkpoint metadata: logWriteOrderID: 1447085325323, queueSize: 0, queueHead: 0
+10 十一月 2015 00:13:46,082 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.Log.writeCheckpoint:1034)  - Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2 position: 0 logWriteOrderID: 1447085325323
+10 十一月 2015 00:13:46,082 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.Log.shutdownWorker:857)  - Attempting to shutdown background worker.
+10 十一月 2015 00:13:46,083 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.LogFile$Writer.close:370)  - Closing /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+10 十一月 2015 00:13:46,083 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.LogFile$RandomReader.close:504)  - Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+10 十一月 2015 00:13:46,089 INFO  [agent-shutdown-hook] (org.apache.flume.channel.file.LogFile$RandomReader.close:504)  - Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+10 十一月 2015 00:13:46,097 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:150)  - Component type: CHANNEL, name: c1 stopped
+10 十一月 2015 00:13:46,097 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:156)  - Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1447085325552
+10 十一月 2015 00:13:46,097 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:162)  - Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447085626097
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000000
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 0
+10 十一月 2015 00:13:46,098 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:178)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+10 十一月 2015 14:09:59,574 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:61)  - Configuration provider starting
+10 十一月 2015 14:09:59,582 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:133)  - Reloading configuration file:conf/flume-conf.properties
+10 十一月 2015 14:09:59,591 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 14:09:59,593 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:931)  - Added sinks: k1 Agent: a1
+10 十一月 2015 14:09:59,593 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 14:09:59,593 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 14:09:59,594 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1017)  - Processing:k1
+10 十一月 2015 14:09:59,608 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:141)  - Post-validation flume configuration contains configuration for agents: [a1]
+10 十一月 2015 14:09:59,608 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:145)  - Creating channels
+10 十一月 2015 14:09:59,624 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type SPILLABLEMEMORY
+10 十一月 2015 14:09:59,651 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:200)  - Created channel c1
+10 十一月 2015 14:09:59,651 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type exec
+10 十一月 2015 14:09:59,661 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: k1, type: file_roll
+10 十一月 2015 14:09:59,668 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:114)  - Channel c1 connected to [r1, k1]
+10 十一月 2015 14:09:59,675 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:138)  - Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@17372afb counterGroup:{ name:null counters:{} } }} channels:{c1=FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }} }
+10 十一月 2015 14:09:59,688 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:145)  - Starting Channel c1
+10 十一月 2015 14:09:59,690 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FileChannel.start:273)  - Starting FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+10 十一月 2015 14:09:59,719 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.<init>:344)  - Encryption is not enabled
+10 十一月 2015 14:09:59,720 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:392)  - Replay started
+10 十一月 2015 14:09:59,731 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:404)  - Found NextFileID 2, from [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2]
+10 十一月 2015 14:09:59,741 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFileV3.<init>:55)  - Starting up with /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint and /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+10 十一月 2015 14:09:59,741 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFileV3.<init>:59)  - Reading checkpoint metadata from /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+10 十一月 2015 14:09:59,878 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FlumeEventQueue.<init>:116)  - QueueSet population inserting 0 took 0
+10 十一月 2015 14:09:59,881 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:443)  - Last Checkpoint Tue Nov 10 00:13:46 CST 2015, queue depth = 0
+10 十一月 2015 14:09:59,886 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.doReplay:528)  - Replaying logs with v2 replay logic
+10 十一月 2015 14:09:59,889 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:249)  - Starting replay of [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2]
+10 十一月 2015 14:09:59,892 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:262)  - Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+10 十一月 2015 14:09:59,902 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.tools.DirectMemoryUtils.getDefaultDirectMemorySize:114)  - Unable to get maxDirectMemory from VM: NoSuchMethodException: sun.misc.VM.maxDirectMemory(null)
+10 十一月 2015 14:09:59,911 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.tools.DirectMemoryUtils.allocate:48)  - Direct Memory Allocation:  Allocation = 1048576, Allocated = 0, MaxDirectMemorySize = 20447232, Remaining = 20447232
+10 十一月 2015 14:09:59,937 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.LogFile$SequentialReader.skipToLastCheckpointPosition:634)  - Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1) is: 1447083159750, which is beyond the requested checkpoint time: 1447085325323 and position 0
+10 十一月 2015 14:09:59,938 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:262)  - Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+10 十一月 2015 14:09:59,939 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.LogFile$SequentialReader.skipToLastCheckpointPosition:634)  - Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2) is: 1447085325323, which is beyond the requested checkpoint time: 1447085325323 and position 0
+10 十一月 2015 14:09:59,939 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.ReplayHandler.replayLog:346)  - read: 0, put: 0, take: 0, rollback: 0, commit: 0, skip: 0, eventCount:0
+10 十一月 2015 14:09:59,939 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FlumeEventQueue.replayComplete:409)  - Search Count = 0, Search Time = 0, Copy Count = 0, Copy Time = 0
+10 十一月 2015 14:09:59,944 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.replay:491)  - Rolling /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+10 十一月 2015 14:09:59,944 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.roll:961)  - Roll start /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+10 十一月 2015 14:09:59,946 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.LogFile$Writer.<init>:214)  - Opened /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3
+10 十一月 2015 14:09:59,955 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.roll:977)  - Roll end
+10 十一月 2015 14:09:59,956 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFile.beginCheckpoint:230)  - Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+10 十一月 2015 14:09:59,958 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.EventQueueBackingStoreFile.checkpoint:255)  - Updating checkpoint metadata: logWriteOrderID: 1447135799761, queueSize: 0, queueHead: 0
+10 十一月 2015 14:09:59,977 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.Log.writeCheckpoint:1034)  - Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3 position: 0 logWriteOrderID: 1447135799761
+10 十一月 2015 14:09:59,977 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.channel.file.FileChannel.start:301)  - Queue Size after replay: 0 [channel=c1]
+10 十一月 2015 14:10:00,045 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+10 十一月 2015 14:10:00,046 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: CHANNEL, name: c1 started
+10 十一月 2015 14:10:00,046 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:173)  - Starting Sink k1
+10 十一月 2015 14:10:00,047 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.sink.RollingFileSink.start:104)  - Starting org.apache.flume.sink.RollingFileSink{name:k1, channel:c1}...
+10 十一月 2015 14:10:00,047 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:184)  - Starting Source r1
+10 十一月 2015 14:10:00,047 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.ExecSource.start:169)  - Exec source starting with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+10 十一月 2015 14:10:00,047 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+10 十一月 2015 14:10:00,048 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SINK, name: k1 started
+10 十一月 2015 14:10:00,048 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.sink.RollingFileSink.start:134)  - RollInterval is not valid, file rolling will not happen.
+10 十一月 2015 14:10:00,048 INFO  [lifecycleSupervisor-1-3] (org.apache.flume.sink.RollingFileSink.start:136)  - RollingFileSink k1 started.
+10 十一月 2015 14:10:00,051 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:120)  - Monitored counter group for type: SOURCE, name: r1: Successfully registered new MBean.
+10 十一月 2015 14:10:00,051 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:96)  - Component type: SOURCE, name: r1 started
+2015-11-11 10:30:43 INFO node.PollingPropertiesFileConfigurationProvider(61): Configuration provider starting
+2015-11-11 10:30:43 INFO node.PollingPropertiesFileConfigurationProvider(133): Reloading configuration file:conf/flume-conf.properties
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(931): Added sinks: k1 Agent: a1
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:30:43 INFO conf.FlumeConfiguration(141): Post-validation flume configuration contains configuration for agents: [a1]
+2015-11-11 10:30:43 INFO node.AbstractConfigurationProvider(145): Creating channels
+2015-11-11 10:30:43 INFO channel.DefaultChannelFactory(42): Creating instance of channel c1 type SPILLABLEMEMORY
+2015-11-11 10:30:43 INFO node.AbstractConfigurationProvider(200): Created channel c1
+2015-11-11 10:30:43 INFO source.DefaultSourceFactory(41): Creating instance of source r1, type exec
+2015-11-11 10:30:43 INFO sink.DefaultSinkFactory(42): Creating instance of sink: k1, type: file_roll
+2015-11-11 10:30:43 INFO node.AbstractConfigurationProvider(114): Channel c1 connected to [r1, k1]
+2015-11-11 10:30:43 INFO node.Application(138): Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@5cb42b counterGroup:{ name:null counters:{} } }} channels:{c1=FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }} }
+2015-11-11 10:30:43 INFO node.Application(145): Starting Channel c1
+2015-11-11 10:30:43 INFO file.FileChannel(273): Starting FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+2015-11-11 10:30:43 INFO file.Log(344): Encryption is not enabled
+2015-11-11 10:30:43 INFO file.Log(392): Replay started
+2015-11-11 10:30:43 INFO file.Log(404): Found NextFileID 3, from [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3]
+2015-11-11 10:30:43 INFO file.EventQueueBackingStoreFileV3(55): Starting up with /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint and /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+2015-11-11 10:30:43 INFO file.EventQueueBackingStoreFileV3(59): Reading checkpoint metadata from /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+2015-11-11 10:30:43 INFO file.FlumeEventQueue(116): QueueSet population inserting 0 took 0
+2015-11-11 10:30:43 INFO file.Log(443): Last Checkpoint Tue Nov 10 16:53:27 CST 2015, queue depth = 0
+2015-11-11 10:30:43 INFO file.Log(528): Replaying logs with v2 replay logic
+2015-11-11 10:30:43 INFO file.ReplayHandler(249): Starting replay of [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3]
+2015-11-11 10:30:43 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+2015-11-11 10:30:43 INFO tools.DirectMemoryUtils(114): Unable to get maxDirectMemory from VM: NoSuchMethodException: sun.misc.VM.maxDirectMemory(null)
+2015-11-11 10:30:43 INFO tools.DirectMemoryUtils(48): Direct Memory Allocation:  Allocation = 1048576, Allocated = 0, MaxDirectMemorySize = 119537664, Remaining = 119537664
+2015-11-11 10:30:43 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1) is: 1447083159750, which is beyond the requested checkpoint time: 1447135799762 and position 0
+2015-11-11 10:30:43 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+2015-11-11 10:30:43 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2) is: 1447085325323, which is beyond the requested checkpoint time: 1447135799762 and position 0
+2015-11-11 10:30:43 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3
+2015-11-11 10:30:43 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3) is: 1447135799762, which is beyond the requested checkpoint time: 1447135799762 and position 0
+2015-11-11 10:30:43 INFO file.ReplayHandler(346): read: 0, put: 0, take: 0, rollback: 0, commit: 0, skip: 0, eventCount:0
+2015-11-11 10:30:43 INFO file.FlumeEventQueue(409): Search Count = 0, Search Time = 0, Copy Count = 0, Copy Time = 0
+2015-11-11 10:30:43 INFO file.Log(491): Rolling /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+2015-11-11 10:30:43 INFO file.Log(961): Roll start /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+2015-11-11 10:30:43 INFO file.LogFile(214): Opened /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4
+2015-11-11 10:30:43 INFO file.Log(977): Roll end
+2015-11-11 10:30:43 INFO file.EventQueueBackingStoreFile(230): Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+2015-11-11 10:30:43 INFO file.EventQueueBackingStoreFile(255): Updating checkpoint metadata: logWriteOrderID: 1447209043373, queueSize: 0, queueHead: 0
+2015-11-11 10:30:43 INFO file.Log(1034): Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4 position: 0 logWriteOrderID: 1447209043373
+2015-11-11 10:30:43 INFO file.FileChannel(301): Queue Size after replay: 0 [channel=c1]
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(96): Component type: CHANNEL, name: c1 started
+2015-11-11 10:30:43 INFO node.Application(173): Starting Sink k1
+2015-11-11 10:30:43 INFO sink.RollingFileSink(104): Starting org.apache.flume.sink.RollingFileSink{name:k1, channel:c1}...
+2015-11-11 10:30:43 INFO node.Application(184): Starting Source r1
+2015-11-11 10:30:43 INFO source.ExecSource(169): Exec source starting with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(96): Component type: SINK, name: k1 started
+2015-11-11 10:30:43 INFO sink.RollingFileSink(134): RollInterval is not valid, file rolling will not happen.
+2015-11-11 10:30:43 INFO sink.RollingFileSink(136): RollingFileSink k1 started.
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: SOURCE, name: r1: Successfully registered new MBean.
+2015-11-11 10:30:43 INFO instrumentation.MonitoredCounterGroup(96): Component type: SOURCE, name: r1 started
+2015-11-11 10:30:48 INFO source.ExecSource(376): Command [tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a] exited with 130
+2015-11-11 10:30:48 INFO lifecycle.LifecycleSupervisor(79): Stopping lifecycle supervisor 11
+2015-11-11 10:30:48 INFO sink.RollingFileSink(228): RollingFile sink k1 stopping...
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(150): Component type: SINK, name: k1 stopped
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: SINK, name: k1. sink.start.time == 1447209043554
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: SINK, name: k1. sink.stop.time == 1447209048097
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.complete == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.empty == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.underflow == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.closed.count == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.creation.count == 1
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.failed.count == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.event.drain.attempt == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.event.drain.sucess == 0
+2015-11-11 10:30:48 INFO sink.RollingFileSink(262): RollingFile sink k1 stopped. Event metrics: SINK:k1{sink.connection.closed.count=1, sink.event.drain.attempt=0, sink.batch.underflow=0, sink.connection.failed.count=0, sink.connection.creation.count=1, sink.event.drain.sucess=0, sink.batch.empty=0, sink.batch.complete=0}
+2015-11-11 10:30:48 INFO node.PollingPropertiesFileConfigurationProvider(83): Configuration provider stopping
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(150): Component type: CHANNEL, name: c1 stopped
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447209048098
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1010000
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 2
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+2015-11-11 10:30:48 INFO file.FileChannel(321): Stopping FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+2015-11-11 10:30:48 INFO file.EventQueueBackingStoreFile(230): Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+2015-11-11 10:30:48 INFO file.EventQueueBackingStoreFile(255): Updating checkpoint metadata: logWriteOrderID: 1447209043374, queueSize: 0, queueHead: 0
+2015-11-11 10:30:48 INFO file.Log(1034): Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4 position: 0 logWriteOrderID: 1447209043374
+2015-11-11 10:30:48 INFO file.Log(857): Attempting to shutdown background worker.
+2015-11-11 10:30:48 INFO file.LogFile(370): Closing /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4
+2015-11-11 10:30:48 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+2015-11-11 10:30:48 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+2015-11-11 10:30:48 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3
+2015-11-11 10:30:48 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(150): Component type: CHANNEL, name: c1 stopped
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1447209043552
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447209048137
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000000
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+2015-11-11 10:30:48 INFO source.ExecSource(192): Stopping exec source with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(150): Component type: SOURCE, name: r1 stopped
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: SOURCE, name: r1. source.start.time == 1447209043557
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: SOURCE, name: r1. source.stop.time == 1447209048140
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append-batch.accepted == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append-batch.received == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append.accepted == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append.received == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.events.accepted == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.events.received == 0
+2015-11-11 10:30:48 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.open-connection.count == 0
+2015-11-11 10:31:54 INFO node.PollingPropertiesFileConfigurationProvider(61): Configuration provider starting
+2015-11-11 10:31:54 INFO node.PollingPropertiesFileConfigurationProvider(133): Reloading configuration file:conf/flume-conf.properties
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(931): Added sinks: k1 Agent: a1
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(1017): Processing:k1
+2015-11-11 10:31:54 INFO conf.FlumeConfiguration(141): Post-validation flume configuration contains configuration for agents: [a1]
+2015-11-11 10:31:54 INFO node.AbstractConfigurationProvider(145): Creating channels
+2015-11-11 10:31:54 INFO channel.DefaultChannelFactory(42): Creating instance of channel c1 type SPILLABLEMEMORY
+2015-11-11 10:31:54 INFO node.AbstractConfigurationProvider(200): Created channel c1
+2015-11-11 10:31:54 INFO source.DefaultSourceFactory(41): Creating instance of source r1, type exec
+2015-11-11 10:31:54 INFO sink.DefaultSinkFactory(42): Creating instance of sink: k1, type: file_roll
+2015-11-11 10:31:54 INFO node.AbstractConfigurationProvider(114): Channel c1 connected to [r1, k1]
+2015-11-11 10:31:54 INFO node.Application(138): Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@752f1627 counterGroup:{ name:null counters:{} } }} channels:{c1=FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }} }
+2015-11-11 10:31:54 INFO node.Application(145): Starting Channel c1
+2015-11-11 10:31:54 INFO file.FileChannel(273): Starting FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+2015-11-11 10:31:54 INFO file.Log(344): Encryption is not enabled
+2015-11-11 10:31:54 INFO file.Log(392): Replay started
+2015-11-11 10:31:54 INFO file.Log(404): Found NextFileID 4, from [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4]
+2015-11-11 10:31:54 INFO file.EventQueueBackingStoreFileV3(55): Starting up with /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint and /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+2015-11-11 10:31:54 INFO file.EventQueueBackingStoreFileV3(59): Reading checkpoint metadata from /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint.meta
+2015-11-11 10:31:54 INFO file.FlumeEventQueue(116): QueueSet population inserting 0 took 0
+2015-11-11 10:31:54 INFO file.Log(443): Last Checkpoint Wed Nov 11 10:30:48 CST 2015, queue depth = 0
+2015-11-11 10:31:54 INFO file.Log(528): Replaying logs with v2 replay logic
+2015-11-11 10:31:54 INFO file.ReplayHandler(249): Starting replay of [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3, /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4]
+2015-11-11 10:31:54 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+2015-11-11 10:31:54 INFO tools.DirectMemoryUtils(114): Unable to get maxDirectMemory from VM: NoSuchMethodException: sun.misc.VM.maxDirectMemory(null)
+2015-11-11 10:31:54 INFO tools.DirectMemoryUtils(48): Direct Memory Allocation:  Allocation = 1048576, Allocated = 0, MaxDirectMemorySize = 119537664, Remaining = 119537664
+2015-11-11 10:31:54 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1) is: 1447083159750, which is beyond the requested checkpoint time: 1447209043374 and position 0
+2015-11-11 10:31:54 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+2015-11-11 10:31:54 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2) is: 1447085325323, which is beyond the requested checkpoint time: 1447209043374 and position 0
+2015-11-11 10:31:54 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3
+2015-11-11 10:31:54 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3) is: 1447135799762, which is beyond the requested checkpoint time: 1447209043374 and position 0
+2015-11-11 10:31:54 INFO file.ReplayHandler(262): Replaying /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4
+2015-11-11 10:31:54 INFO file.LogFile(634): Checkpoint for file(/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4) is: 1447209043374, which is beyond the requested checkpoint time: 1447209043374 and position 0
+2015-11-11 10:31:54 INFO file.ReplayHandler(346): read: 0, put: 0, take: 0, rollback: 0, commit: 0, skip: 0, eventCount:0
+2015-11-11 10:31:54 INFO file.FlumeEventQueue(409): Search Count = 0, Search Time = 0, Copy Count = 0, Copy Time = 0
+2015-11-11 10:31:54 INFO file.Log(491): Rolling /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+2015-11-11 10:31:54 INFO file.Log(961): Roll start /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data
+2015-11-11 10:31:54 INFO file.LogFile(214): Opened /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-5
+2015-11-11 10:31:54 INFO file.Log(977): Roll end
+2015-11-11 10:31:54 INFO file.EventQueueBackingStoreFile(230): Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+2015-11-11 10:31:54 INFO file.EventQueueBackingStoreFile(255): Updating checkpoint metadata: logWriteOrderID: 1447209114133, queueSize: 0, queueHead: 0
+2015-11-11 10:31:54 INFO file.Log(1034): Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-5 position: 0 logWriteOrderID: 1447209114133
+2015-11-11 10:31:54 INFO file.FileChannel(301): Queue Size after replay: 0 [channel=c1]
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(96): Component type: CHANNEL, name: c1 started
+2015-11-11 10:31:54 INFO node.Application(173): Starting Sink k1
+2015-11-11 10:31:54 INFO sink.RollingFileSink(104): Starting org.apache.flume.sink.RollingFileSink{name:k1, channel:c1}...
+2015-11-11 10:31:54 INFO node.Application(184): Starting Source r1
+2015-11-11 10:31:54 INFO source.ExecSource(169): Exec source starting with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(96): Component type: SINK, name: k1 started
+2015-11-11 10:31:54 INFO sink.RollingFileSink(134): RollInterval is not valid, file rolling will not happen.
+2015-11-11 10:31:54 INFO sink.RollingFileSink(136): RollingFileSink k1 started.
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(120): Monitored counter group for type: SOURCE, name: r1: Successfully registered new MBean.
+2015-11-11 10:31:54 INFO instrumentation.MonitoredCounterGroup(96): Component type: SOURCE, name: r1 started
+2015-11-11 10:44:26 INFO lifecycle.LifecycleSupervisor(79): Stopping lifecycle supervisor 11
+2015-11-11 10:44:26 INFO source.ExecSource(192): Stopping exec source with command:tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a
+2015-11-11 10:44:26 INFO source.ExecSource(376): Command [tail -f /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/a] exited with 143
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(150): Component type: SOURCE, name: r1 stopped
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: SOURCE, name: r1. source.start.time == 1447209114308
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: SOURCE, name: r1. source.stop.time == 1447209866757
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append-batch.accepted == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append-batch.received == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append.accepted == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.append.received == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.events.accepted == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.events.received == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SOURCE, name: r1. src.open-connection.count == 0
+2015-11-11 10:44:26 INFO sink.RollingFileSink(228): RollingFile sink k1 stopping...
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(150): Component type: SINK, name: k1 stopped
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: SINK, name: k1. sink.start.time == 1447209114306
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: SINK, name: k1. sink.stop.time == 1447209866759
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.complete == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.empty == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.batch.underflow == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.closed.count == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.creation.count == 1
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.connection.failed.count == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.event.drain.attempt == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: SINK, name: k1. sink.event.drain.sucess == 0
+2015-11-11 10:44:26 INFO sink.RollingFileSink(262): RollingFile sink k1 stopped. Event metrics: SINK:k1{sink.connection.closed.count=1, sink.event.drain.attempt=0, sink.batch.underflow=0, sink.connection.failed.count=0, sink.connection.creation.count=1, sink.event.drain.sucess=0, sink.batch.empty=0, sink.batch.complete=0}
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(150): Component type: CHANNEL, name: c1 stopped
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447209866760
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1010000
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 96
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+2015-11-11 10:44:26 INFO file.FileChannel(321): Stopping FileChannel c1 { dataDirs: [/Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data] }...
+2015-11-11 10:44:26 INFO file.EventQueueBackingStoreFile(230): Start checkpoint for /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/checkpoint/checkpoint, elements to sync = 0
+2015-11-11 10:44:26 INFO file.EventQueueBackingStoreFile(255): Updating checkpoint metadata: logWriteOrderID: 1447209114134, queueSize: 0, queueHead: 0
+2015-11-11 10:44:26 INFO file.Log(1034): Updated checkpoint for file: /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-5 position: 0 logWriteOrderID: 1447209114134
+2015-11-11 10:44:26 INFO file.Log(857): Attempting to shutdown background worker.
+2015-11-11 10:44:26 INFO file.LogFile(370): Closing /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-5
+2015-11-11 10:44:26 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-1
+2015-11-11 10:44:26 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-2
+2015-11-11 10:44:26 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-3
+2015-11-11 10:44:26 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-4
+2015-11-11 10:44:26 INFO file.LogFile(504): Closing RandomReader /Users/Allen/Documents/my_projects/apache-flume-1.6.0-bin/data/data/log-5
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(150): Component type: CHANNEL, name: c1 stopped
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(156): Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1447209114304
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(162): Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1447209866809
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000000
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 0
+2015-11-11 10:44:26 INFO instrumentation.MonitoredCounterGroup(178): Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+2015-11-11 10:44:26 INFO node.PollingPropertiesFileConfigurationProvider(83): Configuration provider stopping
